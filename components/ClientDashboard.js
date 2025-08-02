@@ -16,7 +16,7 @@ const mockApi = {
       setTimeout(() => {
         const mockData = {
           clientName: 'Sarah Mitchell',
-          consultantName: 'Alex Rodriguez',
+          consultantName: 'Josh W',
           companyName: 'Creative Wellness Studio',
           industry: 'Health & Wellness Coaching',
           marketingPlan: {
@@ -381,7 +381,7 @@ export default function ClientDashboard() {
                     </p>
                     <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2">
                         <MessageCircle className="w-5 h-5" />
-                        <span>Message {clientData.consultantName}</span>
+                        <span>Message Josh W</span>
                     </button>
                     <div className="mt-4 pt-4 border-t border-white/20">
                         <p className="text-xs text-gray-500">Response time: Usually within 4 hours</p>
