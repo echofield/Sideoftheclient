@@ -15,24 +15,27 @@ const mockApi = {
     return new Promise(resolve => {
       setTimeout(() => {
         const mockData = {
-          clientName: 'Jane Doe',
+          clientName: 'Client Name', // CHANGE THIS for each client
+          consultantName: 'Your Name', // CHANGE THIS to your consultant name
           marketingPlan: {
-            title: "Digital Marketing Plan - August 2025",
+            title: "Digital Marketing Plan - August 2025", // CHANGE THIS to match client's plan
             tasks: [
               { id: 'task-1', name: 'Define Buyer Persona', completed: true },
               { id: 'task-2', name: 'Develop Social Media Strategy', completed: false },
               { id: 'task-3', name: 'Create 7-Day Content Plan', completed: false },
               { id: 'task-4', name: 'Launch Lead Generation Campaign', completed: false },
               { id: 'task-5', name: 'Schedule First 10 Social Posts', completed: false },
+              // ADD MORE TASKS specific to this client
             ]
           },
           buyerPersona: {
-            name: "The Aspiring Entrepreneur",
-            description: "A small business owner in the education industry who needs a clear, actionable plan to grow their online presence and attract their first clients.",
+            name: "The Target Customer", // CHANGE THIS to client's specific persona
+            description: "Update this description to match the client's specific target customer and industry.", // CHANGE THIS
           },
           resources: [
             { name: "Brand Voice Guide.pdf", type: "PDF" },
             { name: "7-Day Content Calendar Template.xlsx", type: "File" },
+            // ADD MORE RESOURCES specific to this client
           ]
         };
         resolve(mockData);
@@ -106,7 +109,7 @@ export default function ClientDashboard() {
                 </div>
                 <div>
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-teal-600 bg-clip-text text-transparent">
-                        Sadia K
+                        {clientData.consultantName}
                     </h1>
                     <p className="text-sm text-gray-600">Your Marketing Consultant</p>
                 </div>
@@ -191,7 +194,7 @@ export default function ClientDashboard() {
                     </p>
                     <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2">
                         <MessageCircle className="w-5 h-5" />
-                        <span>Message Sadia K</span>
+                        <span>Message {clientData.consultantName}</span>
                     </button>
                 </div>
             </div>
